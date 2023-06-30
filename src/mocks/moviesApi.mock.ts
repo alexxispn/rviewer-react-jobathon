@@ -1,4 +1,4 @@
-import {ApiMovies, ApiMovie} from "../types/Movie";
+import {ApiMovies} from "../types/Movie";
 
 const moviesApiMock: ApiMovies = {
     total: 30,
