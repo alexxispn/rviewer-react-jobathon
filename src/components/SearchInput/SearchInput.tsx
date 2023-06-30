@@ -1,13 +1,15 @@
 import styled from "styled-components/macro";
-import {COLORS} from "../../../constants";
-import SearchIcon from "../../icons/SearchIcon";
+import {COLORS} from "../../constants";
+import SearchIcon from "../icons/SearchIcon";
 
-const SearchInput = ({label, ...delegated}) => {
+const SearchInput = ({label, value, onChange}) => {
+
     return (
         <Label>
-            <Input {...delegated} placeholder="Title"/>
+            <Input type="text" placeholder={label} value={value}
+                   onChange={onChange}/>
             <Icon>
-                <SearchIcon />
+                <SearchIcon/>
             </Icon>
         </Label>
     );
@@ -32,7 +34,7 @@ const Input = styled.input`
   }
 `;
 
-const Icon = styled.div`
+const Icon = styled.button`
   position: absolute;
   top: 0;
   left: 12px;
