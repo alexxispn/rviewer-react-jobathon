@@ -1,6 +1,5 @@
-const API_URL = `https://static.rviewer.io/challenges/datasets/dreadful-cherry-tomatoes/data.json`
-
 import {ApiMovie, ApiMovies, Movie} from "../types/Movie";
+import {API_URL} from "../constants";
 
 const mapMovies = (movies: ApiMovies): Movie[] => {
     return movies.entries.map((movie: ApiMovie) => {

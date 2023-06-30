@@ -44,4 +44,6 @@ export const FAMILIES = {
 };
 
 export const MOVIES_PER_PAGE = 10;
+export const API_URL = `https://static.rviewer.io/challenges/datasets/dreadful-cherry-tomatoes/data.json`
+
 
