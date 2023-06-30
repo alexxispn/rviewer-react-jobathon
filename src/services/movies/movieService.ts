@@ -1,11 +1,11 @@
-import moviesMock from "../../mocks/movies.mock";
-import {ApiMovie, ApiMovies, Movie} from "../../types/Movie";
 import {MOVIES_PER_PAGE} from "../../constants";
+import {Movie} from "../../types/Movie";
+import {getMovies} from "../../api/ApiMovies";
 
 export const movieService = {
 
     getMoviesBySearch: async (search: string = ""): Promise<Movie[]> => {
-        const movies = await fetchMovies();
+        const movies = await getMovies();
         const filteredMovies = movies.filter((movie: Movie) => {
             return movie.title.toLowerCase().includes(search.toLowerCase());
         });
@@ -27,21 +27,6 @@ export const movieService = {
             return b.year - a.year;
         });
     }
-}
-
-const mapMovies = (movies: ApiMovies): Movie[] => {
-    return movies.entries.map((movie: ApiMovie) => {
-        return {
-            title: movie.title,
-            description: movie.description,
-            image: movie.images.posterArt.url,
-            year: movie.releaseYear
-        };
-    });
-};
-const fetchMovies = async (): Promise<Movie[]> => {
-    const movies = mapMovies(moviesMock);
-    return movies;
 }
 
 
