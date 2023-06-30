@@ -1,15 +1,13 @@
 import styled from 'styled-components/macro'
-import DreadfulLogo from "../../icons/DreadfulLogo";
+import DreadfulLogo from "../icons/DreadfulLogo";
 import MaxWidthWrapper from "../MaxWidthWrapper/MaxWidthWrapper";
 
 export const Header = () => {
     return (
-        <header>
-            <Row>
-                <DreadfulLogo/>
-            </Row>
-        </header>
+        <HeaderWrapper>
+            <DreadfulLogo/>
+        </HeaderWrapper>
     )
 }
 
-const Row = styled(MaxWidthWrapper)``;
+const HeaderWrapper = styled(MaxWidthWrapper)``;
