@@ -1,6 +1,7 @@
 import {BrowserRouter as Router} from "react-router-dom";
 import {Header} from "../Header";
 import MoviesSearcher from "../MoviesSearcher/MoviesSearcher";
+import Footer from "../Footer/Footer";
 
 function App() {
     return (
@@ -8,6 +9,7 @@ function App() {
             <>
                 <Header/>
                 <MoviesSearcher/>
+                <Footer/>
             </>
         </Router>
     )
