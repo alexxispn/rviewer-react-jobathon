@@ -1,6 +1,6 @@
-const GooglePlayIcon = () => {
+const AddGoogleLogo = () => {
     return (
-        <svg width="22" height="24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width="36" height="40" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
                 d="M10.1436 11.4417L0.0947266 21.9698C0.207574 22.3698 0.410366 22.7386 0.687598 23.0481C0.964831 23.3576 1.30917 23.5997 1.69428 23.7558C2.07939 23.9118 2.49509 23.9778 2.90959 23.9485C3.3241 23.9193 3.72644 23.7957 4.08585 23.5872L15.3927 17.1475L10.1436 11.4417Z"
                 fill="#EA4335"/>
@@ -16,4 +16,4 @@ const GooglePlayIcon = () => {
         </svg>
     );
 };
-export default GooglePlayIcon;
+export default AddGoogleLogo;
