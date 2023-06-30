@@ -65,6 +65,7 @@ const GlobalStyles = createGlobalStyle`
     --color-primary: ${COLORS.primary};
     --color-secondary: ${COLORS.secondary};
     --color-urgent: ${COLORS.urgent};
+    --color-urgent-light: ${COLORS.urgentLight};
 
     --font-weight-normal: ${WEIGHTS.normal};
     --font-weight-medium: ${WEIGHTS.medium};
