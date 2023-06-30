@@ -1,17 +1,15 @@
 import styled from "styled-components";
 import LeftArrowIcon from "../icons/LeftArrowIcon";
 import RightArrowIcon from "../icons/RightArrowIcon";
-import {useState} from "react";
 
 const MoviesPagination = ({currentPage, totalPages, onPageChange}) => {
-    const [currentP, setCurrentP] = useState(currentPage);
-
     const renderPaginationNumbers = () => {
         return Array.from(Array(totalPages).keys()).map((page) => (
             <PaginationNumber
                 key={page}
                 onClick={() => onPageChange(page + 1)}
                 disabled={currentPage === page + 1}
+                aria-label={`Page ${page + 1}`}
             >
                 {page + 1}
             </PaginationNumber>
@@ -23,6 +21,7 @@ const MoviesPagination = ({currentPage, totalPages, onPageChange}) => {
             <PaginationArrow
                 onClick={() => onPageChange(currentPage - 1)}
                 disabled={currentPage === 1}
+                aria-label="Previous page"
             >
                 <LeftArrowIcon/>
             </PaginationArrow>
@@ -30,6 +29,7 @@ const MoviesPagination = ({currentPage, totalPages, onPageChange}) => {
             <PaginationArrow
                 onClick={() => onPageChange(currentPage + 1)}
                 disabled={currentPage === totalPages}
+                aria-label="Next page"
             >
                 <RightArrowIcon/>
             </PaginationArrow>

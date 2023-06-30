@@ -5,7 +5,7 @@ import SearchIcon from "../icons/SearchIcon";
 const SearchInput = ({label, value, onChange}) => {
 
     return (
-        <Label>
+        <Label htmlFor="search" aria-label={label}>
             <Input type="text" placeholder={label} value={value}
                    onChange={onChange}/>
             <Icon>
