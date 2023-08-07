@@ -2,7 +2,7 @@
   "name": "react-skeleton",
   "version": "1.0.0",
   "description": "Rviewer - Frontend skeleton with React",
-  "author": "Rviewer Team (help@rviewer.io)",
+  "author": "Rviewer Team (help@rviewer.io) && alexxispn",
   "license": "MIT",
   "scripts": {
     "start": "react-scripts start",
